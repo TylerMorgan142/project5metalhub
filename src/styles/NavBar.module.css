@@ -7,8 +7,10 @@
 .NavLink {
     font-family: "Metal Mania", sans-serif;
     font-size: 25px;
+    color: black;
+    padding: 5px;
 }
 
-.silverColor {
-    color: #c0c0c0;
+.Active i {
+    color: #2142b2;
   }
