@@ -13,6 +13,10 @@ import Comment from "../comments/Comment";
 import CommentCreateForm from "../comments/CommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
+import InfiniteScroll from "react-infinite-scroll-component";
+import Asset from "../../components/Asset";
+import { fetchMoreData } from "../../utils/utils";
+
 function PostPage() {
   const { id } = useParams();
   const [post, setPost] = useState({ results: [] });
@@ -41,8 +45,7 @@ function PostPage() {
 
   return (
     <Row className="h-100">
-      <Col className={`${appStyles.FontColour} py-2`} p-0 p-lg-2 lg={8}>
-        <p>Popular profiles for mobile</p>
+      <Col className="py-2" p-0 p-lg-2 lg={8}>
         <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container className={appStyles.Content}>
           {currentUser ? (
@@ -57,9 +60,20 @@ function PostPage() {
             "Comments"
           ) : null}
           {comments.results.length ? (
-            comments.results.map((comment) => (
-              <Comment key={comment.id} {...comment} />
-            ))
+            <InfiniteScroll
+              children={comments.results.map((comment) => (
+                <Comment
+                  key={comment.id}
+                  {...comment}
+                  setPost={setPost}
+                  setComments={setComments}
+                />
+              ))}
+              dataLength={comments.results.length}
+              loader={<Asset spinner />}
+              hasMore={!!comments.next}
+              next={() => fetchMoreData(comments, setComments)}
+            />
           ) : currentUser ? (
             <span>No comments yet, be the first to comment!</span>
           ) : (
@@ -68,9 +82,7 @@ function PostPage() {
         </Container>
       </Col>
       
-      <Col lg={4} className={`${appStyles.FontColour} d-none d-lg-block p-0 p-lg-2`}>
-        Popular profiles for desktop
-      </Col>
+      
     </Row>
   );
 }
