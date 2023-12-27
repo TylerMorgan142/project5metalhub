@@ -73,7 +73,7 @@ const Post = (props) => {
       </Card.Body>
       <Card.Body>
       <Link to={`/posts/${id}`}>
-            {title && <Card.Title className="text-center">{title}</Card.Title>}
+            {title && <Card.Title className={`${styles.font} text-center`}>{title}</Card.Title>}
             {content && <Card.Text>{content}</Card.Text>}
         </Link>
         <div className={styles.PostBar}>

@@ -58,7 +58,7 @@ const NavBar = () => {
   );
 
   return (
-    <Navbar bg="danger" variant="light" expand="md" fixed="top">
+    <Navbar className={styles.Background} variant="light" expand="md" fixed="top">
       <Container>
         <NavLink to="/">
           <Navbar.Brand className={styles.NavBar}>Metalhub</Navbar.Brand>
