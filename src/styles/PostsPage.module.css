@@ -1,6 +1,6 @@
 .SearchBar input {
     border-radius: 20px;
-    color: #242a3d;
+    color: blue;
     padding-left: 40px;
     margin-bottom: 16px;
   }
@@ -17,4 +17,6 @@
     color: #cfced3;
   }
 
-  
+.FontColour{
+    color: #ffffff
+}
