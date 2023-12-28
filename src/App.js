@@ -73,7 +73,7 @@ function App() {
             render={() => <ProfileEditForm />}
           />
 
-          <Route render={() => <p>Page not found!</p>} />
+          <Route render={() => <p className={styles.font}>Page not found!</p>} />
         </Switch>
       </Container>
     </div>
