@@ -67,7 +67,7 @@ const NavBar = () => {
           aria-controls="navbar-collapse"
           onClick={() => setExpanded(!expanded)}
         />
-        <Navbar.Collapse id="navbar-collapse" className={styles.NavCollapse} expanded={expanded}>
+        <Navbar.Collapse id="navbar-collapse" className={styles.NavCollapse} in={expanded}>
           <Nav className="ml-auto">
             {currentUser && addPostIcon}
             <NavLink to="/" className={styles.NavLink}>
