@@ -9,7 +9,6 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
 
-
 import { axiosReq } from "../../api/axiosDefaults";
 import {
   useCurrentUser,
@@ -18,7 +17,7 @@ import {
 
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
-import styles from "../../styles/ProfileEditForm.module.css"
+import styles from "../../styles/ProfileEditForm.module.css";
 
 const ProfileEditForm = () => {
   const currentUser = useCurrentUser();
@@ -55,13 +54,6 @@ const ProfileEditForm = () => {
     handleMount();
   }, [currentUser, history, id]);
 
-  const handleChange = (event) => {
-    setProfileData({
-      ...profileData,
-      [event.target.name]: event.target.value,
-    });
-  };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
@@ -87,16 +79,7 @@ const ProfileEditForm = () => {
 
   const textFields = (
     <>
-      <Form.Group>
-        <Form.Label className={styles.font}>Bio</Form.Label>
-        <Form.Control
-          as="textarea"
-          value={content}
-          onChange={handleChange}
-          name="content"
-          rows={7}
-        />
-      </Form.Group>
+      
 
       {errors?.content?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
@@ -133,7 +116,7 @@ const ProfileEditForm = () => {
               ))}
               <div>
                 <Form.Label
-                  className={`${btnStyles.Button} ${btnStyles.Black} ${styles.font} btn my-auto`}
+                  className={`${btnStyles.Button} ${btnStyles.black} ${styles.font} btn my-auto`}
                   htmlFor="image-upload"
                 >
                   Change the image

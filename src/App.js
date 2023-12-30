@@ -11,6 +11,10 @@ import PostsPage from "./pages/posts/PostsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import PostEditForm from "./pages/posts/PostEditForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
+import ReviewEditForm from "./pages/reviews/ReviewEditForm";
+import ReviewCreateForm from "./pages/reviews/ReviewCreateForm";
+import ReviewsPage from "./pages/reviews/ReviewsPage";
+import ReviewPage from "./pages/reviews/ReviewPage";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
@@ -57,6 +61,10 @@ function App() {
           <Route exact path="/posts/:id" render={() => <PostPage />} />
           <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+          <Route exact path="/reviews/:id" render={() => <ReviewPage />} />
+          <Route exact path="/reviews" render={() => <ReviewsPage />} />
+          <Route exact path="/reviews/create" render={() => <ReviewCreateForm />} />
+          <Route exact path="/reviews/:id/edit" render={() => <ReviewEditForm />} />
           <Route
             exact
             path="/profiles/:id/edit/username"

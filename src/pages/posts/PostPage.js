@@ -4,6 +4,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 
+import styles from "../../styles/PostPage.module.css"
 import appStyles from "../../App.module.css";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -46,7 +47,7 @@ function PostPage() {
 
   return (
     <Row className="h-100">
-      <Col className="py-2" p-0 p-lg-2 lg={8}>
+      <Col className="py-2 p-0 p-lg-2 lg={8}">
       <PopularProfiles mobile />
         <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container className={appStyles.Content}>
@@ -77,9 +78,9 @@ function PostPage() {
               next={() => fetchMoreData(comments, setComments)}
             />
           ) : currentUser ? (
-            <span>No comments yet, be the first to comment!</span>
+            <span className={styles.font}>No comments yet, be the first to comment!</span>
           ) : (
-            <span>No comments... yet</span>
+            <span className={styles.font}>No comments... yet</span>
           )}
         </Container>
       </Col>

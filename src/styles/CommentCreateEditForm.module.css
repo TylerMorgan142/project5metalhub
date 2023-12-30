@@ -5,12 +5,13 @@
   
   .Button {
     border: none;
-    background-color: #242a3d;
+    background-color: black;
     color: aliceblue;
     border-radius: 100px;
     padding: 4px 10px;
     min-width: 75px;
     margin: 5px;
+    font-family: "Metal mania", sans-serif
   }
   
   .Button:hover {

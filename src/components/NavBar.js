@@ -29,20 +29,35 @@ const NavBar = () => {
     </NavLink>
   );
 
+  const addReviewButton = (
+    <NavLink className={styles.NavLink} activeClassName={styles.Active} to="/reviews/create">
+      <i className="far fa-star"></i>Create review
+    </NavLink>
+  );
+
   const loggedInIcons = (
     <>
+      {currentUser && addPostIcon}
+      {addReviewButton}
+      <NavLink to="/" className={styles.NavLink}>
+        <i className="fas fa-home"></i> Posts
+      </NavLink>
+      <NavLink className={styles.NavLink} activeClassName={styles.Active} to="/reviews">
+        <i className="far fa-star"></i> Reviews
+      </NavLink>
       <NavLink className={styles.NavLink} activeClassName={styles.Active} to="/feed">
-        <i className="fas fa-stream"></i>Feed
+        <i className="fas fa-stream"></i> Feed
       </NavLink>
       <NavLink className={styles.NavLink} activeClassName={styles.Active} to="/liked">
-        <i className="fas fa-heart"></i>Liked
+        <i className="fas fa-heart"></i> Liked
       </NavLink>
       <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
-        <i className="fas fa-sign-out-alt"></i>Sign out
+        <i className="fas fa-sign-out-alt"></i> Sign out
       </NavLink>
       <NavLink className={styles.NavLink} to={`/profiles/${currentUser?.profile_id}`}>
         <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
       </NavLink>
+      
     </>
   );
 
@@ -69,10 +84,6 @@ const NavBar = () => {
         />
         <Navbar.Collapse id="navbar-collapse" className={styles.NavCollapse} in={expanded}>
           <Nav className="ml-auto">
-            {currentUser && addPostIcon}
-            <NavLink to="/" className={styles.NavLink}>
-              <i className="fas fa-home"></i> Home
-            </NavLink>
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>
