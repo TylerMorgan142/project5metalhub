@@ -61,10 +61,10 @@ function App() {
           <Route exact path="/posts/:id" render={() => <PostPage />} />
           <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
-          <Route exact path="/reviews/:id" render={() => <ReviewPage />} />
-          <Route exact path="/reviews" render={() => <ReviewsPage />} />
           <Route exact path="/reviews/create" render={() => <ReviewCreateForm />} />
           <Route exact path="/reviews/:id/edit" render={() => <ReviewEditForm />} />
+          <Route exact path="/reviews/:id" render={() => <ReviewPage />} />
+          <Route exact path="/reviews" render={() => <ReviewsPage />} />
           <Route
             exact
             path="/profiles/:id/edit/username"

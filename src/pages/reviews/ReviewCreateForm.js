@@ -5,8 +5,12 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
+
+
 import styles from "../../styles/ReviewCreateEditForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
+
+
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
@@ -33,10 +37,15 @@ function ReviewCreateForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    const formData = new FormData();
 
+    formData.append("title", title);
+    formData.append("content", content);
+    formData.append("rating", rating);
+  
     try {
-      await axiosReq.post("/reviews/", reviewData);
-      history.push(`/reviews`);
+      const { data } = await axiosReq.post("/reviews/", formData);
+      history.push(`/reviews/${data.id}`);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
