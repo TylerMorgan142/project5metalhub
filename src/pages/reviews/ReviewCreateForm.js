@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -23,10 +23,37 @@ function ReviewCreateForm() {
     title: "",
     content: "",
     rating: 0,
+    album: "",
   });
 
-  const { title, content, rating } = reviewData;
+
+  const [albums, setAlbums] = useState([]);
   const history = useHistory();
+
+  useEffect(() => {
+    // Fetch the list of albums when the component mounts
+    const fetchAlbums = async () => {
+      try {
+        let allAlbums = [];
+        let nextUrl = "/albums/";
+  
+        // Fetch all pages until there are no more pages
+        while (nextUrl) {
+          const response = await axiosReq.get(nextUrl);
+          allAlbums = [...allAlbums, ...response.data.results];
+          nextUrl = response.data.next;
+        }
+  
+        setAlbums(allAlbums);
+      } catch (error) {
+        console.error("Error fetching albums:", error);
+      }
+    };
+  
+    fetchAlbums();
+  }, []);
+  
+  const { title, content, rating, album } = reviewData;
 
   const handleChange = (event) => {
     setReviewData({
@@ -35,6 +62,15 @@ function ReviewCreateForm() {
     });
   };
 
+  const handleAlbumChange = (event) => {
+    const selectedAlbumId = event.target.value;
+    setReviewData({
+      ...reviewData,
+      album: selectedAlbumId,
+    });
+  };
+  
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
@@ -42,6 +78,7 @@ function ReviewCreateForm() {
     formData.append("title", title);
     formData.append("content", content);
     formData.append("rating", rating);
+    formData.append("album", album || "");
   
     try {
       const { data } = await axiosReq.post("/reviews/", formData);
@@ -114,11 +151,39 @@ function ReviewCreateForm() {
     </div>
   );
 
+  const albumDropdown = (
+    <Form.Group>
+      <Form.Label>Album</Form.Label>
+      {Array.isArray(albums) && albums.length > 0 ? (
+        <Form.Control
+          as="select"
+          name="album"
+          value={album}
+          onChange={handleAlbumChange}
+        >
+          <option value="" disabled>Select an album</option>
+          {albums.map((album) => (
+            <option key={album.id} value={album.id}>
+              {album.title}
+            </option>
+          ))}
+        </Form.Control>
+      ) : (
+        <p>No albums available</p>
+      )}
+    </Form.Group>
+  );
+  
+  
+  
+  
+
   return (
     <Container className={`${styles.CenteredContainer} ${styles.font}`}>
       <Row>
         <Col md={{ span: 6, offset: 3 }}>
           <Form onSubmit={handleSubmit} className={styles.Form}>
+            {albumDropdown}
             {textFields}
           </Form>
         </Col>
