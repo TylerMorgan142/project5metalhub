@@ -175,5 +175,7 @@ The steps for deployment are as follows:
 3 Give the app a name and assign it a region, then click "create app".
 
 4 In the Deployment page, the app is connected to my github account and repository.
+CLOUDINARY_URL, DATABASE_URL, DISABLE_COLLECTSTATIC, HEROKU_POSTGRESQL_MAROON_URL, 
+SECRET_KEY
 
 5 At the bottom of the Deployment page click Deploy Branch
