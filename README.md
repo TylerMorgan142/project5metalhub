@@ -2,6 +2,70 @@
 
 Metalhub is a site dedicated for the discussion of music in the genre of metal and its many subgenres. The site is targeted towards music lovers who are looking for other people who enjoy the same type of music.
 
+## UX
+
+### User Stories
+
+- As a user I can view a navbar from every page so that I can navigate easily between pages
+
+- As a logged out user I can see sign in and sign up options so that I can sign in/sign up
+
+- As a user I can create a new account so that I can access all the features for signed up users
+
+- As a user I can sign in to the app so that I can access functionality for logged in users
+
+- As a user I can tell if I am logged in or not so that I can log in if I need to
+
+- Refreshing access tokens: As a user I can maintain my logged-in status until I choose to log out so that my user experience is not compromised
+
+- As a logged in user I can create posts so that I can discuss my thoughts with other users
+
+- As a user I can view the details of a single post so that I can learn more about it
+
+- As a user I can view the posts page so that I can read the comments about the post
+
+- As a post owner I can edit my post title and description so that I can make corrections or update my post after it was created
+
+- As a user I can see how long ago a comment was made so that I know how old a comment is
+
+- As a user I can read comments on posts so that I can read what other users think about the posts
+
+- As an owner of a comment I can delete my comment so that I can control removal of my comment from the application
+
+- As a user I can see a list of the most followed profiles so that I can see which profiles are popular
+
+- As a user I can view statistics about a specific user: bio, number of posts, follows and users followed so that I can learn more about them
+
+- As a logged in user I can create reviews so that I can share my thoughts with other users
+
+- As a user I can delete reviews that I no longer wish to show on my profile
+
+- As a review owner I can edit my review title, description and rating so that I can make corrections or update my review after it was created
+
+- As a user I can view user's avatars so that I can easily identify users of the application
+
+- As a user I can view all the posts by a specific user so that I can catch up on their latest posts, or decide I want to follow them
+
+- As a logged in user I can update my username and password so that I can change my display name and keep my profile secure
+
+- As a user I can view all the reviews by a specific user so that I can catch up on their latest reviews, or decide I want to follow them
+
+- As a logged in user I can edit my profile so that I can change my profile picture and bio
+
+- As a logged in user I can follow and unfollow other users so that I can see and remove posts by specific users in my posts feed
+
+- As a user I can navigate through pages quickly so that I can view content seamlessly without page refresh
+
+- As a user I can view other users profiles so that I can see their posts and learn more about them
+
+- As a logged in user I can like a post so that I can show my support for the posts that interest me
+
+- As an owner of a comment I can edit my comment so that I can fix or update my existing comment
+
+- As a logged in user I can add comments to a post so that I can share my thoughts about the post
+
+- 
+
 ## Features
 
 ### Existing Features
@@ -35,7 +99,7 @@ This page also includes a component that shows the sites most followed profiles 
 
 If a user clicks on a specific post they are brought to the page for that posts. If the user is the owner of the post they can delte/edit it. This page includes a comment section. If a user is the owner of a comment they can delete/edit it.
 
-![Post page](/src/assets/Postpage.png)
+![Post page](/src/assets/PostPage.png)
 
 
 If the user clicks on the "Album Reviews" button they are brough to the reviews page. This page displays all album reviews on the website.
@@ -62,3 +126,6 @@ If the user clicks the "Sign Out" button they will be signed out of their accoun
 If the user clicks the "Profile" button they will be taken to their profile page. This page shows how the number of posts/followers/following and displayers all a users posts and reviews. If the account is not the users account there will also be a follow/unfollow button.
 
 ![Profile Page](/src/assets/Profile.png)
+
+
+
