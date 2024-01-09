@@ -128,6 +128,21 @@ If the user clicks the "Profile" button they will be taken to their profile page
 ![Profile Page](/src/assets/Profile.png)
 
 
+# React Components
+
+The Navbar Component is always present anywhere on the site
+
+Several React components are used within other parts of the site.
+For Example:
+
+    MoreDropdown.js component is used in both Post.js and Review.js.
+
+    The Avatar component is used throughout the site anywhere a profile is displayed
+
+    The Asset component is used in the pages for Posts and Reviews
+
+
+
 # Testing
 
 ## Code Validation
@@ -152,8 +167,7 @@ All user stories have been tested manually and they have all succeeded
 This project was deployed to Heroku at [this location](https://metalhub-5230d8c858ac.herokuapp.com/)
 The API is deployed to Heroku at [this location](https://metalhub-api-7e3be8a93e64.herokuapp.com/)
 
-
- The steps for deployment are as follows:
+The steps for deployment are as follows:
 
 1 Sign up for Heroku
 
