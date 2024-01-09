@@ -132,3 +132,38 @@ If the user clicks the "Profile" button they will be taken to their profile page
 
 ## Code Validation
 
+### HTML 
+All html code passed the [W3C validator](https://validator.w3.org/)
+
+### CSS
+All css code passed the [W3C validator](https://jigsaw.w3.org/css-validator/#validate_by_uri)
+
+## Responsiveness
+
+All pages have shown to be responsive on larger and smaller screens
+
+## Manual User Stories Testing
+
+All user stories have been tested manually and they have all succeeded
+
+
+# Deployment
+
+This project was deployed to Heroku at [this location](https://metalhub-5230d8c858ac.herokuapp.com/)
+The API is deployed to Heroku at [this location](https://metalhub-api-7e3be8a93e64.herokuapp.com/)
+
+
+ The steps for deployment are as follows:
+
+1 Sign up for Heroku
+
+2 Go to the dashboard and create a new app
+
+3 Give the app a name and assign it a region, then click "create app".
+
+4 In the settings page of the API give the app a has Config Vars for CLIENT_ORIGIN, CLIENT_ORIGIN_DEV, 
+CLOUDINARY_URL, DATABASE_URL, DISABLE_COLLECTSTATIC, HEROKU_POSTGRESQL_MAROON_URL and SECREY_KEY
+
+5 In the Deployment page, the app is connected to my github account and repository.
+
+6 At the bottom of the Deployment page click Deploy Branch
