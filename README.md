@@ -174,8 +174,12 @@ The steps for deployment are as follows:
 
 3 Give the app a name and assign it a region, then click "create app".
 
-4 In the Deployment page, the app is connected to my github account and repository.
-CLOUDINARY_URL, DATABASE_URL, DISABLE_COLLECTSTATIC, HEROKU_POSTGRESQL_MAROON_URL, 
-SECRET_KEY
+4 Navigate to the "Deploy" tab and select Github as the deployment method.
 
-5 At the bottom of the Deployment page click Deploy Branch
+5 Choose the repository to be deployed, you can also choose to enable automatic deployment.
+
+6 At the bottom of the Deployment page click "Deploy Branch"
+
+7 Once the app is deployed, click the "Open app" button in the Heroku dashboard to view the live application.
+
+The frontend app does not use any Config Vars.
