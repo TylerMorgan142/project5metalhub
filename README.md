@@ -64,7 +64,24 @@ Metalhub is a site dedicated for the discussion of music in the genre of metal a
 
 - As a logged in user I can add comments to a post so that I can share my thoughts about the post
 
- 
+### Design
+
+#### Colour Scheme
+
+The main colours used are black, red and white. This scheme was chosen for a few reasons, it is a bold and eye catching theme
+that offers a hight amount of contrast. This also suits the subject of the site, being metal music which can be views as quite bold and aggressive.
+The website is layed out the content that the user wishes to see is clearly presented on screen in an uncluttered manner.
+
+#### Typograhpy
+
+The main font used is Metal-Mania, this comes from goole fonts and was chosen for it's obvious relation to metal music,
+and it's design being similar to fonts that are commonly used throughout the metal genre.
+This font is used mostly important website features and to make titles more eye catching
+
+The secondary font used is sans-serif, is a simple and clean font that is used throughout the site for things like post content, user profile names etc.
+
+
+#### No wireframes were used in the design process
 
 ## Features
 
