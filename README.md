@@ -256,69 +256,69 @@ All pages have shown to be responsive on larger and smaller screens
         Fill in the form with your edits and save it
 
 
-  - As a user I can view user's avatars so that I can easily identify users of the application
+- As a user I can view user's avatars so that I can easily identify users of the application
  
-        A user can view another user's avatar anywhere that user's profile is displayed
+     A user can view another user's avatar anywhere that user's profile is displayed
 
 
-  - As a user I can view all the posts by a specific user so that I can catch up on their latest posts, or decide I want to follow them
+- As a user I can view all the posts by a specific user so that I can catch up on their latest posts, or decide I want to follow them
  
-        A user can view all of another user's posts by navigating to that user's profile
-        All user profiles include a section showing all the posts they have made
+     A user can view all of another user's posts by navigating to that user's profile
+     All user profiles include a section showing all the posts they have made
 
-  - As a logged in user I can update my username and password so that I can change my display name and keep my profile secure
+ - As a logged in user I can update my username and password so that I can change my display name and keep my profile secure
  
-        A logged in user can update their username and password by completing the following steps:
-            Navigate to your user profile
-            Click the three dots to open a dropdown menu
-            In this menu click the change username or change password button
-            This will take the user to a form where they can make the changes they wish
+      A logged in user can update their username and password by completing the following steps:
+         Navigate to your user profile
+         Click the three dots to open a dropdown menu
+         In this menu click the change username or change password button
+         This will take the user to a form where they can make the changes they wish
 
-    - As a user I can view all the reviews by a specific user so that I can catch up on their latest reviews, or decide I want to follow them
+- As a user I can view all the reviews by a specific user so that I can catch up on their latest reviews, or decide I want to follow them
 
-        A user can view all of another user's reviews by navigating to that users profile
-        All user profiles include a section that shows all the reviews they have made
+     A user can view all of another user's reviews by navigating to that users profile
+     All user profiles include a section that shows all the reviews they have made
 
-    - As a logged in user I can edit my profile so that I can change my profile picture
+- As a logged in user I can edit my profile so that I can change my profile picture
    
-          A logged in user can edit their profile by taking the following steps:
-              Navigate to your profile page
-              Click the three dots to open up a dropdown menu
-              In this menu click the edit profile button
-              This will take the user to an edit profile form where they can change their profile image
+     A logged in user can edit their profile by taking the following steps:
+         Navigate to your profile page
+         Click the three dots to open up a dropdown menu
+         In this menu click the edit profile button
+         This will take the user to an edit profile form where they can change their profile image
 
-     - As a logged in user I can follow and unfollow other users so that I can see and remove posts by specific users in my posts feed
+- As a logged in user I can follow and unfollow other users so that I can see and remove posts by specific users in my posts feed
      
-            A logged in user can follow and unfollow other users by clicking the follow and unfollow buttons found on a users profile
-            These button can also be found on the most popular profiles list
+      A logged in user can follow and unfollow other users by clicking the follow and unfollow buttons found on a users profile
+      These button can also be found on the most popular profiles list
 
-    - As a user I can navigate through pages quickly so that I can view content seamlessly without page refresh
+- As a user I can navigate through pages quickly so that I can view content seamlessly without page refresh
 
-          Using the navbar allows a user to easily and seamlessly navigate throughout different pages without needing to refresh
+      Using the navbar allows a user to easily and seamlessly navigate throughout different pages without needing to refresh
 
-      - As a user I can view other users profiles so that I can see their posts and learn more about them
+- As a user I can view other users profiles so that I can see their posts and learn more about them
 
-            A user can view another users profile by clicking on that users avatar
-            These avatars appear in various places throughout the site including posts and comments left by the user and on the most followed list
+      A user can view another users profile by clicking on that users avatar
+      These avatars appear in various places throughout the site including posts and comments left by the user and on the most followed list
 
-      - As a logged in user I can like a post so that I can show my support for the posts that interest me
+- As a logged in user I can like a post so that I can show my support for the posts that interest me
      
-            A logged in user can like a post by clicking the heart button that appears at the bottom of every post
+       A logged in user can like a post by clicking the heart button that appears at the bottom of every post
 
-      - As an owner of a comment I can edit my comment so that I can fix or update my existing comment
+- As an owner of a comment I can edit my comment so that I can fix or update my existing comment
      
-            A user who own a comment can edit that comment by following these steps:
-            Navigate tho the post that the comment has been left under
-            Find the comment and click the three dots
-            This will open a dropdown menu
-            In this menu, click the edit button
-            This will allow the user to make changes to their comment
+       A user who own a comment can edit that comment by following these steps:
+         Navigate tho the post that the comment has been left under
+         Find the comment and click the three dots
+         This will open a dropdown menu
+         In this menu, click the edit button
+         This will allow the user to make changes to their comment
 
-      - As a logged in user I can add comments to a post so that I can share my thoughts about the post
+- As a logged in user I can add comments to a post so that I can share my thoughts about the post
 
-            A logged in user can add comments to a post by completing the following steps:
-                Navigate the post under which you wish to leave a comment
-                Here the user can see a comment form where that they can fill in
+        A logged in user can add comments to a post by completing the following steps:
+          Navigate the post under which you wish to leave a comment
+          Here the user can see a comment form where that they can fill in
 
 
         
